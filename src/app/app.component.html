@@ -1,0 +1,11 @@
+<app-header></app-header>
+<!-- $event returns dom object, access to data admitted-->
+<!-- sends from app-cards to parent app.component-->
+<span>Take note that when there are double vowels a smaller つ is placed between vowels</span>
+
+<main>
+  <app-cards (kanaCreated)="onPostKanaAdded($event)"></app-cards>
+  <!--sends data from parent, app.component, to app-post-create -->
+  <app-post-create [enteredContent]="storedKana"></app-post-create>
+  <app-post-list></app-post-list>
+</main>

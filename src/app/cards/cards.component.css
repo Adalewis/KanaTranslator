@@ -1,0 +1,37 @@
+mat-card {
+
+  position: absolute;
+  left: 1vw;
+  right: 1vw;
+  padding: 0;
+  width: auto;
+}
+
+mat-card-actions {
+  height: 100%;
+  padding: 1em;
+  margin-bottom: 0px;
+}
+
+button {
+  margin-bottom: 10px;
+
+  padding: 0;
+  font-size: 25px;
+}
+
+.mat-card-actions .mat-raised-button {
+     margin: 0 0px;
+}
+
+td { background-color: #191970; color: #e6e6fa; }
+
+textarea.mat-input-element {
+  justify-content: right;
+  padding-left: 1em;
+  width: 35vw;
+}
+.mat-flat-button {
+  margin-left: 1em;
+
+}

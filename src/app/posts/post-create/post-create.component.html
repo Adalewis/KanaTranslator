@@ -1,0 +1,37 @@
+<mat-card class="postCreateBox">
+  <!--button type submit submits the form it is in -->
+  <!-- #postForm="ngForm" gives access to angular object -->
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <textarea
+        matInput
+        rows="2"
+        name="title"
+        #value
+        ngModel
+        required
+        placeholder="Post Romaji"
+        #content="ngModel"
+        [value]="enteredContent.hiragana"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        rows="2"
+        type="text"
+        name="content"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Post Translation"
+        #title="ngModel">
+        <!--using #title as local reference to input so *
+        ngIf="content.invalid" == *ngIf="postForm.getControl('content').invalid"-->
+      <mat-error *ngIf="content.invalid">Please enter content.</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Post</button>
+  </form>
+</mat-card>

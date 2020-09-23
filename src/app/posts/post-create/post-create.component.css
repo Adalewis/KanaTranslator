@@ -1,0 +1,13 @@
+mat-form-field,
+textarea {
+  width: 90%;
+}
+.postCreateBox {
+  width: auto;
+  display: block;
+}
+mat-card {
+  width: auto;
+  padding-bottom: 1em;
+  padding-top: 0;
+}
